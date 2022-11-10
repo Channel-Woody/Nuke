@@ -137,6 +137,7 @@ public final class FetchImage: ObservableObject, Identifiable {
             },
             completion: { [weak self] result in
                 guard let self = self else { return }
+              
                 withAnimation(self.animation) {
                     self.handle(result: result.mapError { $0 })
                 }

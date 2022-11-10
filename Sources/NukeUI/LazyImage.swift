@@ -268,6 +268,7 @@ public struct LazyImage<Content: View>: View {
     private func onAppear() {
         // Unfortunately, you can't modify @State directly in the properties
         // that set these options.
+      
         model.animation = animation
         if let processors = processors { model.processors = processors }
         if let priority = priority { model.priority = priority }
